@@ -1,0 +1,13 @@
+*.py
+*.pyc
+*.pyo
+__pycache__/
+*~
+*.elf
+*.s
+*.o
+*.d
+*.ll
+*.bc
+*.ini
+*.txt
