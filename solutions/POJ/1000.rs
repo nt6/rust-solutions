@@ -1,26 +1,13 @@
 #![cfg_attr(not(debug_assertions), no_main)]
 
+#[macro_use]
 extern crate pl;
-use pl::io::{scanf, printf};
 
-#[cfg(not(debug_assertions))]
-#[no_mangle]
-pub extern fn main() -> i32 {
-    solution_main();
-    0
-}
-
-#[cfg(debug_assertions)]
+#[cfg_attr(not(debug_assertions), no_mangle)]
 pub fn main() {
-    solution_main();
-}
-
-fn solution_main() {
     let mut a : i32 = 0;
     let mut b : i32 = 0;
 
-    unsafe {
-        scanf(b"%d %d\0".as_ptr(), &a, &b);
-        printf(b"%d\n\0".as_ptr(), a+b);
-    }
+    scanf!("%d %d", &mut a, &mut b);
+    printf!("%d\n", a+b);
 }
