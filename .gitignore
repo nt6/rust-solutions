@@ -9,5 +9,4 @@ __pycache__/
 *.d
 *.ll
 *.bc
-*.ini
-*.txt
+*.sqlite
